@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avivamentos no Brasil - Parte 3: Frida Vingren (A Voz Pioneira e a Fé Provada)</title>
+    <style>
+        :root {
+            --primary-color: #4a253b;
+            --primary-light: #6b3756;
+            --secondary-color: #2b2b2b;
+            --text-dark: #2b2b2b;
+            --text-muted: #555555;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --border-color: #e2dcd0;
+            --accent-gold: #c59b27;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        header {
+            background: linear-gradient(rgba(30, 15, 25, 0.88), rgba(55, 25, 45, 0.88)), url('frida_revival.jpg') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+            color: #f7e8c4;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 900px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .header-meta {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .hero-img-container {
+            margin: -2rem auto 2.5rem auto;
+            max-width: 900px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .hero-img-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        nav.toc {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 6px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        nav.toc h2 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.5rem 1.5rem;
+        }
+
+        nav.toc a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        nav.toc a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        h2.section-title {
+            font-family: var(--font-serif);
+            font-size: 1.9rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3.subsection-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            background-color: #fcf4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            font-family: var(--font-serif);
+            color: #4a253b;
+            border-radius: 0 6px 6px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #fdf6e7;
+            border: 1px solid #e2dcd0;
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-family: var(--font-serif);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f8f5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: var(--primary-color);
+            color: #dcdcdc;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-gold);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p.subtitle { font-size: 1.05rem; }
+            section { padding: 1.5rem; }
+            .hero-img-container { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-meta">Avivamentos no Brasil — Assembleia de Deus (Parte 3)</div>
+        <h1>Frida Vingren: A Voz Pioneira, a Hinologia e a Fé Provada no Fogo</h1>
+        <p class="subtitle">A Chamada Solteira, a Liderança na Imprensa, o Louvor no Sepulcro e o Amor Incondicional ao Brasil</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Imagem de Capa do Estudo -->
+        <div class="hero-img-container">
+            <img src="frida_revival.jpg" alt="Frida Vingren escrevendo artigos e hinos para a igreja no Brasil">
+            <div class="hero-img-caption">Frida Vingren: poetisa, jornalista, tradutora de hinos e pregadora que doou sua inteligência e vida ao Brasil.</div>
+        </div>
+
+        <!-- Sumário -->
+        <nav class="toc">
+            <h2>Sumário do Estudo</h2>
+            <ul>
+                <li><a href="#sec1">1. Introdução: A Chamada Missionária Autônoma</a></li>
+                <li><a href="#sec2">2. Liderança, Imprensa e Ensino: A Voz Feminina no Púlpito e nas Letras</a></li>
+                <li><a href="#sec3">3. A Dor do Luto, o Cântico no Cemitério e a Palavra ao Esposo</a></li>
+                <li><a href="#sec4">4. A Hinologia da Harpa Cristã: Trechos e Teologia dos Hinos</a></li>
+                <li><a href="#sec5">5. Perseguições, Calúnias, Internamento Injusto e Fim Trágico</a></li>
+                <li><a href="#sec6">6. Exegese Neotestamentária: Joel 2:28 e Romanos 16</a></li>
+                <li><a href="#sec7">7. Tabela Comparativa das Múltiplas Dimensões de Frida Vingren</a></li>
+                <li><a href="#sec8">8. Conclusão: O Amor ao Brasil que Nem a Morte Apagou</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção 1 -->
+        <section id="sec1">
+            <h2 class="section-title">1. Introdução: A Chamada Missionária Autônoma</h2>
+            <p>Frida Maria Strandberg nasceu na Suécia em 1891. Antes de conhecer Gunnar Vingren, recebeu de Deus um chamado missionário pessoal e irrevogável. Educada, diplomada em enfermagem e com formação literária e musical, viajou solteira para o Pará em 1917.</p>
+            <p>Enfrentou o preconceito de uma sociedade e de um meio religioso que duvidava da capacidade ministerial de uma mulher solteira. Pautou sua atuação no mandamento supremo do Evangelho e na firmeza de que a Grande Comissão pertence a todo aquele que crê.</p>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="sec2">
+            <h2 class="section-title">2. Liderança, Imprensa e Ensino: A Voz Feminina no Púlpito e nas Letras</h2>
+            <p>Frida Vingren foi a mente por trás da estruturação da imprensa pentecostal no Brasil. Redigiu, traduziu e editou os periódicos <em>O Som Alegre</em>, <em>A Mensagem da Cruz</em> e o tradicional <em>O Mensageiro da Paz</em>.</p>
+
+            <div class="highlight-box">
+                <p><strong>A Guardiã do Pastoreio nas Ausências do Esposo:</strong></p>
+                <p>Quando Gunnar Vingren viajava por longos meses em missões de implantação pelo interior do país, era Frida quem assumia a condução dos cultos, a administração da igreja local no Rio de Janeiro e em Belém, o ensino bíblico e a visitação aos enfermos, demonstrando erudição e unção espiritual extraordinárias.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="sec3">
+            <h2 class="section-title">3. A Dor do Luto, o Cântico no Cemitério e a Palavra ao Esposo</h2>
+            <p>A vida de Frida no Brasil foi marcada pelo sofrimento avassalador de perder filhos ainda pequenos para as febres e a falta de medicina adequada na época.</p>
+
+            <p>No sepultamento de um de seus filhos, enquanto a dor parecia esmagar as forças da família e Gunnar Vingren vacilava diante do desânimo de tantas provações, Frida ergueu-se junto ao sepulcro. Em meio às lágrimas, começou a cantar louvores a Deus e, olhando nos olhos do esposo abatido, encorajou-o com autoridade profética:</p>
+
+            <blockquote>
+                <p>“Bem-aventurado o homem que põe no Senhor a sua confiança!” — Salmo 40:4</p>
+            </blockquote>
+        </section>
+
+        <!-- Seção 4 -->
+        <section id="sec4">
+            <h2 class="section-title">4. A Hinologia da Harpa Cristã: Trechos e Teologia dos Hinos</h2>
+            <p>Frida Vingren traduziu e compôs mais de 20 hinos que se tornaram a voz poética da hinologia pentecostal brasileira na **Harpa Cristã**:</p>
+
+            <ul>
+                <li><strong>Hino 28 — "Deus vai te guiar":</strong>
+                    <p><em>"Andas carregado de tristeza e dor, Sem nenhum auxílio, nem um Salvador? Ouve a mensagem de teu bom Jesus, E tem mais coragem, leva a tua cruz. Deus vai te guiar com a Sua mão, Deus vai te guiar com a Sua mão!”</em></p>
+                </li>
+                <li><strong>Hino 394 — "A mão no arado":</strong>
+                    <p><em>“Quem sua mão no arado já pôs. Não deve para trás olhar; O que no mundo ficou depois, Não serve para Deus herdar; Quem quer a coroa no céu possuir, A cruz do Senhor tem de aqui conduzir; Se as aflições o quiserem curtir, Jesus o vai confortar.”</em></p>
+                </li>
+                <li><strong>Hino 126 — "Bem Aventurança do Crente":</strong>
+                    <p><em>“Bem-aventurado o que confia. No Senhor, como fez Abraão; Ele creu, ainda que não via. E, assim, a fé não foi em vão. É feliz quem segue, fielmente, Nos caminhos santos do Senhor; Na tribulação é paciente, Esperando no Seu Salvador.”</em></p>
+            </ul>
+        </section>
+
+        <!-- Seção 5 -->
+        <section id="sec5">
+            <h2 class="section-title">5. Perseguições, Calúnias, Internamento Injusto e Fim Trágico</h2>
+            <p>Após a morte de Gunnar Vingren em 1933, Frida enfrentou a fase mais sombria de sua trajetória. Marginalizada por setores da liderança masculina que não aceitavam sua firmeza e projeção intelectual, foi vítima de calúnias sobre sua estabilidade emocional.</p>
+            <p>Retornou à Suécia viúva, doente e em extrema pobreza. Enfrentou o isolamento e chegou a ser internada injustamente em uma instituição psiquiátrica. Faleceu em 1940, aos 49 anos. Mesmo sob tamanha injustiça humana, suas últimas cartas e diários revelam um coração puro, sem amargura, que orava e expressava amor pelo Brasil até o último suspiro.</p>
+        </section>
+
+        <!-- Seção 6 -->
+        <section id="sec6">
+            <h2 class="section-title">6. Exegese Neotestamentária: Joel 2:28 e Romanos 16</h2>
+            <p>O ministério de Frida Vingren encontra respaldo direto no cumprimento de <strong>Joel 2:28</strong> e <strong>Atos 2:17-18</strong> (<em>“derramarei do meu Espírito sobre toda a carne; vossos filhos e vossas filhas profetizarão”</em>), bem como no modelo das cooperadoras apostólicas de Paulo em <strong>Romanos 16</strong> (como Febe, Priscila e Júnia).</p>
+        </section>
+
+        <!-- Seção 7 -->
+        <section id="sec7">
+            <h2 class="section-title">7. Tabela Comparativa das Múltiplas Dimensões de Frida Vingren</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensão da Atuação</th>
+                            <th>Contribuição Prática e Letras</th>
+                            <th>Impacto no Avivamento Brasileiro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Compositora / Tradutora</strong></td>
+                            <td>Hinos icônicos da Harpa Cristã (ex: Hinos 125, 126 e 393).</td>
+                            <td>Moldou a hinologia e a piedade congregacional no Brasil.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jornalista e Escritora</strong></td>
+                            <td>Edição dos jornais <em>O Mensageiro da Paz</em> e <em>A Mensagem da Cruz</em>.</td>
+                            <td>Formação doutrinária e comunicação entre as igrejas do país.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dirigente e Conselheira</strong></td>
+                            <td>Direção da igreja nas ausências de Gunnar e apoio nas crises.</td>
+                            <td>Demonstração da autoridade e capacidade ministerial feminina.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testemunho no Sofrimento</strong></td>
+                            <td>Louvor no cemitério após a perda dos filhos e mansidão no abandono.</td>
+                            <td>Exemplo imortal de fé inabalável em meio ao fogo da provação.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção 8 -->
+        <section id="sec8">
+            <h2 class="section-title">8. Conclusão: O Amor ao Brasil que Nem a Morte Apagou</h2>
+            <p>Frida Vingren foi um dom inestimável de Deus para o Brasil. Sua vida prova que a verdadeira grandeza no Reino de Deus não depende de reconhecimento humano, mas da fidelidade absoluta a Cristo, mesmo quando o preço é o sacrifício de tudo.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Série Avivamentos no Brasil (Parte 3: Frida Vingren). Repositório brunorsvieira/avivamentos.</p>
+    </footer>
+
+</body>
+</html>
