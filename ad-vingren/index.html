@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avivamentos no Brasil - Parte 1: Gunnar Vingren (O Sacrifício e a Entrega)</title>
+    <style>
+        :root {
+            --primary-color: #1c3144;
+            --primary-light: #2c4d6b;
+            --secondary-color: #2b2b2b;
+            --text-dark: #2b2b2b;
+            --text-muted: #555555;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --border-color: #e2dcd0;
+            --accent-gold: #c59b27;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        header {
+            background: linear-gradient(rgba(15, 25, 35, 0.88), rgba(25, 45, 65, 0.88)), url('vingren_revival.jpg') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+            color: #f7e8c4;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 900px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .header-meta {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .hero-img-container {
+            margin: -2rem auto 2.5rem auto;
+            max-width: 900px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .hero-img-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        nav.toc {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 6px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        nav.toc h2 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.5rem 1.5rem;
+        }
+
+        nav.toc a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        nav.toc a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        h2.section-title {
+            font-family: var(--font-serif);
+            font-size: 1.9rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3.subsection-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            background-color: #f4f7f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            font-family: var(--font-serif);
+            color: #1c3144;
+            border-radius: 0 6px 6px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #fdf6e7;
+            border: 1px solid #e2dcd0;
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-family: var(--font-serif);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f8f5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: var(--primary-color);
+            color: #dcdcdc;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-gold);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p.subtitle { font-size: 1.05rem; }
+            section { padding: 1.5rem; }
+            .hero-img-container { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-meta">Avivamentos no Brasil — Assembleia de Deus (Parte 1)</div>
+        <h1>Gunnar Vingren: O Sacrifício, o Caráter e a Entrega Total</h1>
+        <p class="subtitle">A Chamada sem Retorno, o Despojamento do Poder, os Filhos Enterrados e o Leito de Morte do Pioneiro</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Imagem de Capa do Estudo -->
+        <div class="hero-img-container">
+            <img src="vingren_revival.jpg" alt="Gunnar Vingren nos primórdios da missão no Pará">
+            <div class="hero-img-caption">Gunnar Vingren no Brasil: a história de um homem que doou sua vida, entregou a obra aos nacionais e morreu sem reter nada para si.</div>
+        </div>
+
+        <!-- Sumário -->
+        <nav class="toc">
+            <h2>Sumário do Estudo</h2>
+            <ul>
+                <li><a href="#sec1">1. Introdução: A Renúncia e a Chamada para o Pará</a></li>
+                <li><a href="#sec2">2. O Despojamento do Poder: Entregar a Obra aos Brasileiros</a></li>
+                <li><a href="#sec3">3. A Dor do Pioneiro: Filhos Enterrados em Solo Brasileiro</a></li>
+                <li><a href="#sec4">4. Perseguições, Calúnias e Oposição Religiosa</a></li>
+                <li><a href="#sec5">5. O Leito de Morte e as Visões Finais de Vingren</a></li>
+                <li><a href="#sec6">6. Síntese Bíblica Neotestamentária: 2 Coríntios 12:15</a></li>
+                <li><a href="#sec7">7. Paralelos com a Espiritualidade do Quebrantamento</a></li>
+                <li><a href="#sec8">8. Tabela Comparativa das Etapas da Vida de Vingren</a></li>
+                <li><a href="#sec9">9. Conclusão e O Legado Imaterial</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção 1 -->
+        <section id="sec1">
+            <h2 class="section-title">1. Introdução: A Renúncia e a Chamada para o Pará</h2>
+            <p>Em 1909, Gunnar Vingren era um jovem diplomado pelo Seminário Teológico Batista de Chicago, com um futuro promissor no pastoreio na América do Norte ou na Suécia. No entanto, durante uma conferência de oração em South Bend (Indiana), uma revelação profética indicou a cidade de "Pará" — um local de cuja existência nem ele nem seu companheiro Daniel Berg jamais tinham ouvido falar.</p>
+            <p>Em novembro de 1910, sem sustento financeiro de juntas missionárias formais e movidos exclusivamente pela obediência bíblica, desembarcaram no porto de Belém do Pará. Vingren abriu mão de seu conforto, de sua pátria e de seus direitos para tornar-se um instrumento no derramamento do Espírito Santo no Brasil.</p>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="sec2">
+            <h2 class="section-title">2. O Despojamento do Poder: Entregar a Obra aos Brasileiros</h2>
+            <p>Um dos traços mais nobres do caráter de Gunnar Vingren foi a total ausência de apetite pelo poder institucional. Enquanto muitos missionários europeus do século XIX e XX mantiveram o controle administrativo e financeiro das igrejas fundadas no sul global, Vingren adotou uma postura estritamente apostólica e humilde.</p>
+
+            <div class="highlight-box">
+                <p><strong>A Descentralização e a Formação de Líderes Nacionais:</strong></p>
+                <p>Vingren entendeu que a igreja pertencia ao povo brasileiro e ao Espírito Santo. Formou, capacitou e consagrou os primeiros pastores e evangelistas nacionais (como Cícero Canuto de Lima, Crispim de Melo e centenas de outros), transferindo gradativamente a liderança das assembleias locais aos obreiros brasileiros sem qualquer ressentimento ou reserva de autoridade.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="sec3">
+            <h2 class="section-title">3. A Dor do Pioneiro: Filhos Enterrados em Solo Brasileiro</h2>
+            <p>O preço da evangelização do Brasil foi pago com sangue e lágrimas familiares. Vivendo em condições de extrema pobreza e enfrentando o clima hostil e as febres tropicais do Norte e Nordeste, Gunnar e sua esposa, Frida Vingren, enfrentaram provações dolorosas.</p>
+            <p>Três de seus filhos adoeceram gravemente devido à falta de recursos e assistência médica adequada na época, vindo a falecer ainda na infância. Gunnar Vingren e Frida sepultaram seus próprios filhos na terra brasileira, selando o seu amor pela nação não apenas com palavras, mas com o sacrifício de suas dores mais profundas.</p>
+        </section>
+
+        <!-- Seção 4 -->
+        <section id="sec4">
+            <h2 class="section-title">4. Perseguições, Calúnias e Oposição Religiosa</h2>
+            <p>A expansão do avivamento pentecostal gerou intensa oposição. Vingren foi alvo de calúnias em jornais, acusações de fanatismo por setores clérigos tradicionais e até perseguições físicas e apedrejamentos em locais onde pregava no interior do país.</p>
+            <p>Mesmo diante de injustiças e difamações severas, sua resposta mantinha-se pautada pela mansidão bíblica, recusando-se a alimentar contendas e focando unicamente na intercessão e na pregação da Palavra.</p>
+        </section>
+
+        <!-- Seção 5 -->
+        <section id="sec5">
+            <h2 class="section-title">5. O Leito de Morte e as Visões Finais de Vingren</h2>
+            <p>Em 1932, após anos de desgaste físico extremo, febres recorrentes e esgotamento decorrente do pastoreio da igreja no Rio de Janeiro, a saúde de Vingren colapsou definitivamente. Ele retornou à Suécia gravemente enfermo para seus últimos meses de vida.</p>
+
+            <blockquote>
+                <p>“Eu de bom grado gastarei e me deixarei gastar pelas vossas almas...” — 2 Coríntios 12:15</p>
+            </blockquote>
+
+            <p>Nos seus momentos finais em Estocolmo (1933), desprovido de qualquer bem material ou economia pessoal, Vingren enfrentou dores intensas no peito. Relatos de Frida Vingren registram que, mesmo no leito de morte, Gunnar tinha visões espirituais da glória de Deus e orava em línguas e em português intercedendo pelo Brasil, partindo para o Senhor sem deixar herança terrena, mas um legado espiritual incalculável.</p>
+        </section>
+
+        <!-- Seção 6 -->
+        <section id="sec6">
+            <h2 class="section-title">6. Síntese Bíblica Neotestamentária</h2>
+            <p>A vida de Gunnar Vingren encarna o modelo apostólico registrado em **2 Coríntios 12:15** e **Atos 20:24**: <em>“Em nada tenho a minha vida por preciosa, contanto que cumpra com alegria a minha carreira e o ministério que recebi do Senhor Jesus.”</em></p>
+            <p>Sua postura de renunciar ao controle das igrejas e entregá-las aos nacionais reflete a eclesiologia de Paulo, que constituía presbíteros locais em cada cidade e os encomendava ao Senhor (Atos 14:23).</p>
+        </section>
+
+        <!-- Seção 7 -->
+        <section id="sec7">
+            <h2 class="section-title">7. Paralelos com a Espiritualidade do Quebrantamento</h2>
+            <p>A espiritualidade de Vingren conecta-se com a tradição do Pietismo e do misticismo da auto-anulação (Kenosis). Ele não viveu para projetar o seu nome; viveu para que o movimento pertencesse totalmente a Cristo e ao povo brasileiro.</p>
+        </section>
+
+        <!-- Seção 8 -->
+        <section id="sec8">
+            <h2 class="section-title">8. Tabela Comparativa das Etapas da Vida de Vingren</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fase da Vida</th>
+                            <th>Desafio / Provação Enfrentada</th>
+                            <th>Resposta Teológica / Fruto Histórico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A Chamada (1909-1910)</strong></td>
+                            <td>Abandono da carreira na Suécia/EUA para ir ao Pará sem sustento.</td>
+                            <td>Obediência à visão profética e fundação do movimento pentecostal em Belém.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>O Ministério no Brasil</strong></td>
+                            <td>Enfermidades tropicais, pobreza e a perda trágica de filhos pequenos.</td>
+                            <td>Perseverança na pregação e consagração da família em solo brasileiro.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A Governança Eclesial</strong></td>
+                            <td>Tentações de centralização e controle colonial do movimento.</td>
+                            <td>Ceder a liderança aos pastores nacionais, formando uma igreja genuinamente brasileira.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>O Leito de Morte (1932-1933)</strong></td>
+                            <td>Esgotamento físico, dores no peito, pobreza e separação do Brasil.</td>
+                            <td>Oração intercessora pelo Brasil até o último suspiro e entrada na glória sem bens materiais.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção 9 -->
+        <section id="sec9">
+            <h2 class="section-title">9. Conclusão e O Legado Imaterial</h2>
+            <p>Gunnar Vingren morreu sem deixar propriedades, títulos ou fortunas terrenas. Sua herança foi imaterial e eterna: uma vida inteira consumida no altar de Deus em favor do Brasil.</p>
+            <p>Seu exemplo de despojamento, amor pelo povo brasileiro e fidelidade no sofrimento permanece como o alicerce espiritual mais precioso da história do avivamento pentecostal no país.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Série Avivamentos no Brasil (Parte 1: Gunnar Vingren). Repositório brunorsvieira/avivamentos.</p>
+    </footer>
+
+</body>
+</html>
