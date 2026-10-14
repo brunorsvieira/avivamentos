@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos sobre Avivamentos Históricos</title>
+    <style>
+        :root {
+            --primary-color: #1f2a38;
+            --accent-gold: #c59b27;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --border-color: #e2dcd0;
+            --text-dark: #2b2b2b;
+            --text-muted: #666666;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(15, 20, 30, 0.9), rgba(15, 20, 30, 0.9)), url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            color: #f7e8c4;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-transform: capitalize;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #34495e;
+        }
+
+        #loading {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            grid-column: 1 / -1;
+            padding: 3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: #dcdcdc;
+            margin-top: 4rem;
+            border-top: 3px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Avivamentos Históricos</h1>
+        <p>Estudos teológicos, análise exegética e impacto social dos grandes movimentos de renovação espiritual</p>
+    </header>
+
+    <div class="container">
+        <div id="grid" class="grid">
+            <div id="loading">Carregando estudos do repositório...</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Repositório de Estudos Teológicos | brunorsvieira/avivamentos</p>
+    </footer>
+
+    <script>
+        const USERNAME = 'brunorsvieira';
+        const REPO = 'avivamentos';
+
+        // Nomes amigáveis e imagens para pastas conhecidas
+        const folderMetadata = {
+            'hebridas': {
+                title: 'O Avivamento das Hébridas (1949–1952)',
+                description: 'História, parábola bíblica, exegese de Tiago 4:8 e paralelos com o misticismo cristão.',
+                image: 'hebridas/image_1791718071625.jpeg'
+            },
+            'gales': {
+                title: 'O Avivamento de Gales (1904–1905)',
+                description: 'O despertar da mocidade, Evan Roberts, Florrie Evans e o significado teológico do "Dobra-nos!".',
+                image: 'gales/gales_revival.jpg'
+            },
+            'azusa': {
+                title: 'O Avivamento da Rua Azusa (1906)',
+                description: 'Os bastidores, os personagens esquecidos, a herança Quaker e os alertas de Frank Bartleman.',
+                image: 'azusa/azusa_revival.jpg'
+            },
+            'azuza': {
+                title: 'O Avivamento da Rua Azusa (1906)',
+                description: 'Os bastidores, os personagens esquecidos, a herança Quaker e os alertas de Frank Bartleman.',
+                image: 'azuza/azusa_revival.jpg'
+            }
+        };
+
+        async function fetchStudies() {
+            const gridEl = document.getElementById('grid');
+            try {
+                // Consulta a API do GitHub para obter as pastas do repositório
+                const response = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/`);
+                if (!response.ok) throw new Error('Não foi possível carregar o conteúdo do repositório.');
+                
+                const files = await response.json();
+                
+                // Filtra apenas diretórios que não começam com ponto (ex: .git)
+                const folders = files.filter(item => item.type === 'dir' && !item.name.startsWith('.'));
+
+                gridEl.innerHTML = ''; // Limpa a mensagem de carregamento
+
+                if (folders.length === 0) {
+                    gridEl.innerHTML = '<div id="loading">Nenhum estudo encontrado no momento.</div>';
+                    return;
+                }
+
+                folders.forEach(folder => {
+                    const folderName = folder.name.toLowerCase();
+                    const meta = folderMetadata[folderName] || {
+                        title: `Estudo: ${folder.name.charAt(0).toUpperCase() + folder.name.slice(1)}`,
+                        description: `Análise detalhada e documentação sobre o estudo contido na pasta /${folder.name}.`,
+                        image: `${folder.name}/cover.jpg`
+                    };
+
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <img src="${meta.image}" class="card-img" alt="${meta.title}" onerror="this.src='https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80'">
+                        <div class="card-body">
+                            <h2 class="card-title">${meta.title}</h2>
+                            <p class="card-desc">${meta.description}</p>
+                            <a href="./${folder.name}/" class="btn">Acessar Estudo</a>
+                        </div>
+                    `;
+                    gridEl.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error(error);
+                gridEl.innerHTML = `<div id="loading">Erro ao carregar os estudos. Verifique se o repositório é público.</div>`;
+            }
+        }
+
+        fetchStudies();
+    </script>
+</body>
+</html>
