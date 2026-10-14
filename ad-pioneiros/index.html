@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avivamentos no Brasil - Parte 4: Os Pioneiros Nacionais e os Bastidores</title>
+    <style>
+        :root {
+            --primary-color: #3b2c1a;
+            --primary-light: #5a442a;
+            --secondary-color: #2b2b2b;
+            --text-dark: #2b2b2b;
+            --text-muted: #555555;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --border-color: #e2dcd0;
+            --accent-gold: #c59b27;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        header {
+            background: linear-gradient(rgba(30, 20, 10, 0.88), rgba(55, 38, 20, 0.88)), url('pioneiros_revival.jpg') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+            color: #f7e8c4;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 900px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .header-meta {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .hero-img-container {
+            margin: -2rem auto 2.5rem auto;
+            max-width: 900px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .hero-img-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        nav.toc {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 6px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        nav.toc h2 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.5rem 1.5rem;
+        }
+
+        nav.toc a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        nav.toc a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        h2.section-title {
+            font-family: var(--font-serif);
+            font-size: 1.9rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3.subsection-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            background-color: #fdf8f2;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            font-family: var(--font-serif);
+            color: #3b2c1a;
+            border-radius: 0 6px 6px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #fdf6e7;
+            border: 1px solid #e2dcd0;
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-family: var(--font-serif);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f8f5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: var(--primary-color);
+            color: #dcdcdc;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-gold);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p.subtitle { font-size: 1.05rem; }
+            section { padding: 1.5rem; }
+            .hero-img-container { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-meta">Avivamentos no Brasil — Assembleia de Deus (Parte 4)</div>
+        <h1>Os Pioneiros Nacionais e os Bastidores do Mover</h1>
+        <p class="subtitle">Celina Albuquerque, Cícero Canuto de Lima e os Obreiros Anônimos que Pagaram o Preço da Expansão</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Imagem de Capa do Estudo -->
+        <div class="hero-img-container">
+            <img src="pioneiros_revival.jpg" alt="Celina Albuquerque e os pioneiros brasileiros em oração no Pará">
+            <div class="hero-img-caption">A reunião na Rua de São João, Belém: os primeiros crentes brasileiros que abriram suas casas, enfrentaram a rejeição e sustentaram a chama do avivamento.</div>
+        </div>
+
+        <!-- Sumário -->
+        <nav class="toc">
+            <h2>Sumário do Estudo</h2>
+            <ul>
+                <li><a href="#sec1">1. Introdução: O Mover que Ganhou Rosto Brasileiro</a></li>
+                <li><a href="#sec2">2. Celina Albuquerque e Maria de Nazaré: O Batismo Pioneiro</a></li>
+                <li><a href="#sec3">3. Cícero Canuto de Lima: A Transição e o Apaziguamento Doutrinário</a></li>
+                <li><a href="#sec4">4. Os Obreiros do Sertão e das Matas: Perseguições e Prisões</a></li>
+                <li><a href="#sec5">5. As Mães do Mover: Hospedagem, Intercessão e Sacrifício</a></li>
+                <li><a href="#sec6">6. Síntese Bíblica Neotestamentária: 1 Coríntios 12 e Romanos 16</a></li>
+                <li><a href="#sec7">7. Tabela Comparativa dos Pioneiros Nacionais</a></li>
+                <li><a href="#sec8">8. Conclusão e O Legado dos Desconhecidos</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção 1 -->
+        <section id="sec1">
+            <h2 class="section-title">1. Introdução: O Mover que Ganhou Rosto Brasileiro</h2>
+            <p>Embora Gunnar Vingren, Daniel Berg e Frida Vingren tenham sido os catalisadores estrangeiros do movimento pentecostal no Brasil, a rápida expansão e a interiorização da mensagem só foram possíveis graças ao exército de brasileiros e brasileiras que abraçaram a fé com paixão inconteste.</p>
+            <p>Homens e mulheres simples, muitos dos quais analfabetos ou trabalhadores rurais, pagaram o preço do ostracismo social, da violência física e do preconceito religioso para consolidar as congregações em cada vila do país.</p>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="sec2">
+            <h2 class="section-title">2. Celina Albuquerque e Maria de Nazaré: O Batismo Pioneiro</h2>
+            <p>Em 8 de junho de 1911, na casa situada à Rua de São João, nº 240, em Belém do Pará, **Celina Martins Albuquerque** tornou-se a primeira pessoa em solo brasileiro a vivenciar o batismo no Espírito Santo com a evidência de falar em novas línguas. Horas depois, na mesma madrugada, **Maria de Nazaré** recebeu a mesma experiência.</p>
+
+            <div class="highlight-box">
+                <p><strong>A Dor do Rechaço Social e Religioso:</strong></p>
+                <p>O batismo de Celina resultou na imediata excomunhão e rejeição por parte da comunidade eclesiástica tradicional à qual pertencia. Celina e seu esposo, Henrique Albuquerque, abriram a própria casa para abrigar as primeiras reuniões do grupo perseguido, tornando-se o berço material do movimento pentecostal no Brasil.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="sec3">
+            <h2 class="section-title">3. Cícero Canuto de Lima: A Transição e o Apaziguamento Doutrinário</h2>
+            <p>Conforme o movimento crescia, fez-se necessária uma liderança nacional de grande envergadura moral e preparo bíblico. A figura do pastor **Cícero Canuto de Lima** destaca-se como o grande arquiteto da transição entre a geração dos pioneiros suecos e a consolidação do ministério nacional.</p>
+            <p>Presidindo a igreja em São Paulo e liderando convenções nacionais por décadas, Canuto de Lima enfrentou momentos de crise e tentações de cisão com sabedoria, mantendo a unidade doutrinária, a sobriedade na pregação e a defesa da liberdade do Espírito Santo sem desambição pessoal.</p>
+        </section>
+
+        <!-- Seção 4 -->
+        <section id="sec4">
+            <h2 class="section-title">4. Os Obreiros do Sertão e das Matas: Perseguições e Prisões</h2>
+            <p>Pioneiros como **Crispim de Melo**, **Clímaco Bueno Aza** e **Bruno Skolimowski** levaram o avivamento ao interior do Nordeste, Sudeste e Sul sob circunstâncias dramáticas:</p>
+
+            <ul>
+                <li><strong>Apedrejamentos e Violência:</strong> Em dezenas de cidades do interior, cultos foram interrompidos por multidões insufladas, resultando em templos de taipa queimados e preretores espancados.</li>
+                <li><strong>Prisões Injustas:</strong> Obreiros foram presos sob acusações falsas de perturbação da ordem ou charlatanismo, passando semanas em celas insalubres enquanto oravam e cantavam hinos, convertendo os próprios carcereiros.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 5 -->
+        <section id="sec5">
+            <h2 class="section-title">5. As Mães do Mover: Hospedagem, Intercessão e Sacrifício</h2>
+            <p>Por trás de cada congregação aberta havia mulheres anônimas que lavavam, cozinhavam e hospedavam evangelistas itinerantes sem receberem remuneração. Elas transformavam suas salas de estar em templos provisórios e sustentavam a obra com orações e jejuns rigorosos.</p>
+        </section>
+
+        <!-- Seção 6 -->
+        <section id="sec6">
+            <h2 class="section-title">6. Síntese Bíblica Neotestamentária</h2>
+            <p>A diversidade e a cooperação dos pioneiros brasileiros refletem a eclesiologia de **1 Coríntios 12:12-26** e a lista de cooperadores de Paulo em **Romanos 16**. O avivamento não foi construído por um homem só, mas pela articulação orgânica de todo o Corpo de Cristo.</p>
+        </section>
+
+        <!-- Seção 7 -->
+        <section id="sec7">
+            <h2 class="section-title">7. Tabela Comparativa dos Pioneiros Nacionais</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do Pioneiro</th>
+                            <th>Papel e Atuação Principal</th>
+                            <th>Preço Pago / Legado Histórico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Celina Albuquerque</strong></td>
+                            <td>Primeira pessoa batizada com o Espírito Santo no Brasil.</td>
+                            <td>Rejeição religiosa e cessão de sua casa para o nascimento da igreja.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cícero Canuto de Lima</strong></td>
+                            <td>Líder nacional e presidente de convenções.</td>
+                            <td>Sabedoria na transição ministerial e estruturação do movimento em SP.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Crispim de Melo</strong></td>
+                            <td>Evangelista e pioneiro na interiorização.</td>
+                            <td>Prisões, perseguições no sertão e implantação de dezenas de congregações.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maria de Nazaré</strong></td>
+                            <td>Intercessora e pioneira na visitação.</td>
+                            <td>Sustentação espiritual do mover inicial em Belém através da oração.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção 8 -->
+        <section id="sec8">
+            <h2 class="section-title">8. Conclusão e O Legado dos Desconhecidos</h2>
+            <p>A história da Assembleia de Deus no Brasil é a soma das lágrimas, do trabalho e do sangue de centenas de homens e mulheres cujos nomes não figuram nos livros de história terrena, mas estão gravados eternamente no Livro da Vida.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Série Avivamentos no Brasil (Parte 4: Pioneiros Nacionais). Repositório brunorsvieira/avivamentos.</p>
+    </footer>
+
+</body>
+</html>
