@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avivamentos no Brasil - Parte 5: O Poder, os Milagres e os Prodígios</title>
+    <style>
+        :root {
+            --primary-color: #1a2a3a;
+            --primary-light: #2c4259;
+            --secondary-color: #2b2b2b;
+            --text-dark: #2b2b2b;
+            --text-muted: #555555;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --border-color: #e2dcd0;
+            --accent-gold: #c59b27;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        header {
+            background: linear-gradient(rgba(10, 20, 30, 0.88), rgba(25, 40, 60, 0.88)), url('poder_revival.jpg') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+            color: #f7e8c4;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 900px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .header-meta {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .hero-img-container {
+            margin: -2rem auto 2.5rem auto;
+            max-width: 900px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .hero-img-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        nav.toc {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 6px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        nav.toc h2 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.5rem 1.5rem;
+        }
+
+        nav.toc a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        nav.toc a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        h2.section-title {
+            font-family: var(--font-serif);
+            font-size: 1.9rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3.subsection-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            background-color: #f4f7fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            font-family: var(--font-serif);
+            color: #1a2a3a;
+            border-radius: 0 6px 6px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #fdf6e7;
+            border: 1px solid #e2dcd0;
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-family: var(--font-serif);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f8f5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: var(--primary-color);
+            color: #dcdcdc;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-gold);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p.subtitle { font-size: 1.05rem; }
+            section { padding: 1.5rem; }
+            .hero-img-container { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-meta">Avivamentos no Brasil — Assembleia de Deus (Parte 5)</div>
+        <h1>O Poder, os Milagres e os Prodígios</h1>
+        <p class="subtitle">A Demonstração do Espírito, o Batismo em Línguas, as Curas Incuráveis e o Resgate do Modelo de Atos dos Apóstolos</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Imagem de Capa do Estudo -->
+        <div class="hero-img-container">
+            <img src="poder_revival.jpg" alt="A manifestação de poder e o batismo no Espírito Santo nos primórdios no Pará">
+            <div class="hero-img-caption">O mover de poder no Brasil: a manifestação do Espírito Santo com sinais, curas instantâneas e batismos que marcaram o nascimento do movimento pentecostal.</div>
+        </div>
+
+        <!-- Sumário -->
+        <nav class="toc">
+            <h2>Sumário do Estudo</h2>
+            <ul>
+                <li><a href="#sec1">1. Introdução: Não em Palavras de Sabedoria, mas em Demonstração de Poder</a></li>
+                <li><a href="#sec2">2. O Batismo no Espírito Santo e o Falar em Línguas</a></li>
+                <li><a href="#sec3">3. Milagres de Cura Física e Incuráveis Relatados</a></li>
+                <li><a href="#sec4">4. Libertações Espirituais e Transformação Social</a></li>
+                <li><a href="#sec5">5. Paralelo Bíblico: A Continuidade de Atos dos Apóstolos</a></li>
+                <li><a href="#sec6">6. Conexão Histórica com Outros Avivamentos Globais</a></li>
+                <li><a href="#sec7">7. Tabela Comparativa: Sinais em Atos vs. Sinais na AD no Brasil</a></li>
+                <li><a href="#sec8">8. Conclusão da Série: O Fogo que Não Se Apaga</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção 1 -->
+        <section id="sec1">
+            <h2 class="section-title">1. Introdução: Não em Palavras de Sabedoria, mas em Demonstração de Poder</h2>
+            <p>Após conhecermos as dores, a pobreza, o isolamento e as provações enfrentadas por Gunnar Vingren, Daniel Berg, Frida Vingren e pelos pioneiros nacionais, este estudo final volta suas lentes para o combustível sobrenatural que sustentou o avivamento: a manifestação tangível do **poder de Deus**.</p>
+            <p>Em um Brasil do início do século XX marcado por um índice de analfabetismo superior a 65%, com infraestrutura médica escassa e forte opressão social, o Evangelho pregado pelos pioneiros não se firmou na sabedoria humana de discursos elaborados, mas na demonstração do Espírito e de poder (1 Coríntios 2:4).</p>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="sec2">
+            <h2 class="section-title">2. O Batismo no Espírito Santo e o Falar em Línguas</h2>
+            <p>O sinal distintivo que marcou o nascimento do movimento pentecostal no Pará em 1911 foi a promessa de **Atos 2:4** tornada viva no cotidiano brasileiro.</p>
+
+            <div class="highlight-box">
+                <p><strong>A Experiência de Celina Albuquerque e o Foco na Promessa:</strong></p>
+                <p>Na madrugada de 8 de junho de 1911, ao receber o batismo no Espírito Santo após horas de busca fervorosa e oração contínua, Celina Albuquerque começou a falar em idiomas desconhecidos e a glorificar a Deus sob um impacto de júbilo indescritível. A experiência não foi um evento emocional isolado; trouxe consigo um revestimento de ousadia (*parrhesia*) que levou homens e mulheres simples a testemunharem de Cristo sem temor.</p>
+            </div>
+
+            <p>Relatos da época registram que pessoas sem instrução formal falavam e oravam em línguas que posteriormente eram identificadas por imigrantes ou estrangeiros presentes como idiomas cultos (xeilolalia e glossolalia), acompanhadas de interpretações espirituais e profecias que traziam direção às congregações emergentes.</p>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="sec3">
+            <h2 class="section-title">3. Milagres de Cura Física e Incuráveis Relatados</h2>
+            <p>As reuniões nos primeiros tempos eram marcadas pela expectativa da intervenção direta de Deus sobre os enfermos. Diante da impossibilidade de tratamento médico nas regiões inóspitas da Amazônia e do sertão nordestino, os crentes recorriam à promessa de **Tiago 5:14-15** e **Marcos 16:17-18**.</p>
+
+            <ul>
+                <li><strong>Curas Instantâneas de Tuberculose e Lepra:</strong> Documentos históricos e os primeiros periódicos como <em>O Som Alegre</em> registram testemunhos de doentes em estágio terminal de tuberculose e lepra (hanseníase) que eram desenganados por médicos em Belém e Recife. Após a imposição de mãos e a oração da fé feita por Vingren, Berg e obreiros locais, os pacientes eram completamente restaurados.</li>
+                <li><strong>Abertura de Olhos e Restauração de Paralíticos:</strong> Relatos no interior do Nordeste e em Alagoas descrevem pessoas cegas de nascença e indivíduos com membros atrofiados que voltavam a andar e enxergar nos cultos de oração, desencadeando ondas de conversões em vilas inteiras.</li>
+                <li><strong>O Uso de Lenços e a Oração à Distância:</strong> Seguindo o padrão de Atos 19:11-12, quando os pioneiros não podiam deslocar-se a localidades distantes por falta de transporte, enviavam lenços consagrados em oração, resultando em relatos de curas e libertações extraordinárias à distância.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 4 -->
+        <section id="sec4">
+            <h2 class="section-title">4. Libertações Espirituais e Transformação Social</h2>
+            <p>O poder manifesto não se limitou às enfermidades físicas; atuou fortemente na libertação de cativeiros espirituais e vícios destrutivos.</p>
+
+            <blockquote>
+                <p>“E estes sinais acompanharão os que crerem: em meu nome expulsarão demônios; falarão novas línguas...” — Marcos 16:17</p>
+            </blockquote>
+
+            <p>A imposição de mãos sobre indivíduos atormentados por opressões graves resultava em libertações imediatas. Bêbados inveterados, garimpeiros violentos e chefes de vilas temidos pela brutalidade eram transformados instantaneamente ao entrarem nos locais de culto, tornando-se homens mansos, trabalhadores e pacificadores em suas comunidades.</p>
+        </section>
+
+        <!-- Seção 5 -->
+        <section id="sec5">
+            <h2 class="section-title">5. Paralelo Bíblico: A Continuidade de Atos dos Apóstolos</h2>
+            <p>O movimento pentecostal no Brasil compreendeu sua existência não como uma nova invenção denominacional, mas como a **restauração do cristianismo do Novo Testamento**. Os mesmos fenômenos descritos no livro de Atos reapareceram no solo brasileiro:</p>
+
+            <ul>
+                <li><strong>Atos 3 (Cura na Porta Formosa) =</strong> As curas públicas de paralíticos em feiras e praças que abriam caminho para a pregação.</li>
+                <li><strong>Atos 4:31 (O Lugar Tremeu) =</strong> Reuniões de oração em casas de madeira no Pará e no interior de São Paulo onde a presença de Deus era tão tangível que os participantes sentiam o recinto estremecer sob a glória divina.</li>
+                <li><strong>Atos 10 (A Casa de Cornélio) =</strong> O derramamento do Espírito Santo sem distinção de classe social, etnia ou escolaridade.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 6 -->
+        <section id="sec6">
+            <h2 class="section-title">6. Conexão Histórica com Outros Avivamentos Globais</h2>
+            <p>A experiência brasileira de poder mantém conexão direta com a corrente de avivamentos que varreu o mundo no início do século XX:</p>
+
+            <ul>
+                <li><strong>Rua Azusa (1906):</strong> Assim como no galpão de Los Angeles, a glória de Deus manifestava-se em ambiente humilde, sem pompa, onde a presença do Espírito operava prodígios sem dependência de liturgias engessadas.</li>
+                <li><strong>País de Gales (1904):</strong> O mesmo espírito de cântico espontâneo, quebrantamento e profunda contrição que tomou a mocidade galesa esteve presente nas madrugadas de oração no Brasil.</li>
+                <li><strong>Hébridas (1949):</strong> A presença de Deus tornava-se tão densa nas vilas que pessoas eram convencidas do pecado antes mesmo de entrarem nos templos.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 7 -->
+        <section id="sec7">
+            <h2 class="section-title">7. Tabela Comparativa: Sinais em Atos vs. Sinais na AD no Brasil</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Relato no Livro de Atos</th>
+                            <th>Manifestação Histórica na AD (Brasil)</th>
+                            <th>Impacto Espiritual e Social</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Batismo com Línguas</strong><br>(Atos 2:4; 10:46)</td>
+                            <td>Derramamento em Belém (1911) e em convenções estaduais.</td>
+                            <td>Revestimento de poder e intrepidez para evangelizar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Curas Extraordinárias</strong><br>(Atos 3:1-10; 9:34)</td>
+                            <td>Curas de tuberculose, cegueira e lepra atestadas por médicos.</td>
+                            <td>Abertura do Evangelho em vilas e cidades resistentes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Libertação de Opressões</strong><br>(Atos 8:7; 16:18)</td>
+                            <td>Expulsão de demônios e quebra de vícios instantânea.</td>
+                            <td>Transformação moral de famílias e regeneração de bairros.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Visões e Direção Profética</strong><br>(Atos 10:9-16; 16:9)</td>
+                            <td>A chamada profética para "Pará" e revelações em cultos rurais.</td>
+                            <td>Expansão geográfica estratégica dirigida pelo Espírito.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção 8 -->
+        <section id="sec8">
+            <h2 class="section-title">8. Conclusão da Série: O Fogo que Não Se Apaga</h2>
+            <p>A saga da Assembleia de Deus no Brasil — desde a chamada irrevogável de Gunnar Vingren e Daniel Berg, a inteligência e o sofrimento de Frida Vingren, a fibra dos pioneiros nacionais, até o derramamento de sinais e prodígios — permanece como um dos maiores monumentos da história eclesiástica moderna.</p>
+            <p>A trajetória desse avivamento demonstra que quando a dor e a provação são recebidas com humildade, e a Palavra de Deus é obedecida com radicalidade, o Espírito Santo responde com poder avassalador, transformando a fraqueza humana em um testemunho imortal para as futuras gerações.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Série Avivamentos no Brasil (Parte 5: O Poder e os Milagres). Repositório brunorsvieira/avivamentos.</p>
+    </footer>
+
+</body>
+</html>
